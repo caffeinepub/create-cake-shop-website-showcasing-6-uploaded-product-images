@@ -1,0 +1,87 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-responsive-cake-shop-website-homepage-that-showcases-six-products-using-the-user-uploaded-images-sponge-cake-jpeg-banana-cake-jpeg-nuts-cookies-jpeg-malai-cake-jpeg-kitkat-chocolate-cake-jpeg-and-honey-cake-jpeg",
+      "featureTitle": "Create a responsive cake shop website homepage that showcases six products using the user-uploaded images: \"Sponge Cake.jpeg\", \"Banana Cake.jpeg\", \"Nuts cookies.jpeg\", \"Malai Cake.jpeg\", \"Kitkat chocolate cake.jpeg\", and \"honey cake.jpeg\".",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/ProductCard.tsx",
+        "frontend/src/components/ProductGrid.tsx",
+        "frontend/src/data/products.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-product-details-experience-for-each-of-the-six-items-either-a-dedicated-product-page-or-an-in-page-modal-drawer-that-opens-when-a-user-selects-a-product-and-shows-at-minimum-product-name-larger-image-and-a-short-description-generic-text-is-ok",
+      "featureTitle": "Add a product details experience for each of the six items (either a dedicated product page or an in-page modal/drawer) that opens when a user selects a product and shows at minimum: product name, larger image, and a short description (generic text is OK).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/ProductDetailsDialog.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-basic-site-sections-suitable-for-a-small-cake-shop-website-a-header-with-site-name-navigation-links-e-g-home-products-contact-and-a-contact-section-with-placeholder-shop-details-address-phone-email-text-placeholders-only",
+      "featureTitle": "Add basic site sections suitable for a small cake shop website: a header with site name, navigation links (e.g., Home/Products/Contact), and a contact section with placeholder shop details (address/phone/email text placeholders only).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/ContactSection.tsx",
+        "frontend/src/components/SiteHeader.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-coherent-bakery-themed-visual-design-across-the-site-warm-appetizing-palette-such-as-cream-caramel-chocolate-tones-friendly-typography-soft-card-surfaces-subtle-shadows-avoid-blue-purple-as-the-primary-theme-colors",
+      "featureTitle": "Apply a coherent bakery-themed visual design across the site (warm, appetizing palette such as cream/caramel/chocolate tones; friendly typography; soft card surfaces; subtle shadows). Avoid blue/purple as the primary theme colors.",
+      "files": [
+        "frontend/src/components/ContactSection.tsx",
+        "frontend/src/components/ProductCard.tsx",
+        "frontend/src/components/ProductDetailsDialog.tsx",
+        "frontend/src/components/SiteHeader.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "frontend/src/App.tsx": "Main application component that orchestrates the cake shop website layout with hero section, product grid, contact section, and product details dialog with state management for product selection.",
+  "frontend/src/data/products.ts": "Product data definition containing the six cake/cookie products with their names, image paths, and descriptions.",
+  "frontend/src/components/ProductCard.tsx": "Reusable product card component displaying product image and name with hover effects and a \"View Details\" button.",
+  "frontend/src/components/ProductGrid.tsx": "Responsive grid layout component that renders all six product cards in a mobile-first adaptive grid.",
+  "frontend/src/components/ProductDetailsDialog.tsx": "Modal dialog component using shadcn Dialog to display enlarged product image and full description.",
+  "frontend/src/components/SiteHeader.tsx": "Sticky header with site branding and responsive navigation using shadcn Sheet for mobile menu with smooth scroll functionality.",
+  "frontend/src/components/HeroSection.tsx": "Hero banner section with headline, tagline, and call-to-action button that scrolls to products.",
+  "frontend/src/components/ContactSection.tsx": "Contact information section displaying address, phone, and email in a card layout with icons.",
+  "frontend/src/components/Footer.tsx": "Footer component with copyright notice and caffeine.ai attribution with heart icon.",
+  "frontend/src/index.css": "Global styles with warm bakery-themed OKLCH color palette (caramel, honey, cream tones) for both light and dark modes.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with custom fonts, warm color tokens, soft shadows, and bakery-appropriate design tokens.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder file for future React Query hooks when backend functionality is added."
+}

@@ -1,0 +1,90 @@
+{
+  "kind": "build_request",
+  "title": "Create cake shop website showcasing 6 uploaded product images",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a responsive cake shop website homepage that showcases six products using the user-uploaded images: \"Sponge Cake.jpeg\", \"Banana Cake.jpeg\", \"Nuts cookies.jpeg\", \"Malai Cake.jpeg\", \"Kitkat chocolate cake.jpeg\", and \"honey cake.jpeg\".",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Hi Team, I need to create one cake shop website with the below images\n1. Sponge Cake \n2. Banana Cake \n3. Nuts cookies\n4. Malai Cake \n5. Kitkat chocolate cake\n6. Honey Cake"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Homepage renders a product grid/list with exactly 6 products matching the names provided by the user.",
+        "Each product card displays the corresponding uploaded image and product name.",
+        "Layout is responsive (mobile, tablet, desktop) with no horizontal scrolling at common breakpoints."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Add a product details experience for each of the six items (either a dedicated product page or an in-page modal/drawer) that opens when a user selects a product and shows at minimum: product name, larger image, and a short description (generic text is OK).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "I need to create one cake shop website with the below images"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Selecting a product from the main list opens a details view for that specific product.",
+        "Details view includes the correct product name and the same image shown on the card, displayed larger.",
+        "User can close the details view and return to the product list."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Add basic site sections suitable for a small cake shop website: a header with site name, navigation links (e.g., Home/Products/Contact), and a contact section with placeholder shop details (address/phone/email text placeholders only).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "I need to create one cake shop website"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Header is visible and contains a site name plus navigation links that scroll to sections or navigate within the app.",
+        "A Contact section is present and includes placeholder address, phone, and email text.",
+        "Navigation works on both desktop and mobile (e.g., collapses into a menu or stacks appropriately)."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Apply a coherent bakery-themed visual design across the site (warm, appetizing palette such as cream/caramel/chocolate tones; friendly typography; soft card surfaces; subtle shadows). Avoid blue/purple as the primary theme colors.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Site uses a consistent visual theme (colors, typography, spacing) across header, product cards, details view, and contact section.",
+        "Primary visual styling reads as a bakery/cake shop theme (warm neutrals; not a tech/enterprise look).",
+        "No blue/purple is used as the dominant brand color (accents are acceptable, but theme should not be blue/purple-led)."
+      ]
+    }
+  ],
+  "constraints": [
+    "Frontend must not modify any files under immutable paths: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui (compose these components instead).",
+    "Backend must follow the single-actor Motoko architecture if any backend work is added later."
+  ],
+  "nonGoals": [
+    "No online payments/checkout flow.",
+    "No third-party authentication providers (Internet Identity only, and not required for this site).",
+    "No real-time features (WebSockets/chat).",
+    "No external databases or external hosting/provider integrations."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

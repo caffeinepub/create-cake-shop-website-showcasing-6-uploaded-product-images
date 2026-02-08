@@ -1,0 +1,151 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Cake shop website (6-product showcase)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Build a responsive homepage showcasing exactly six products using the provided uploaded images and names.",
+      "acceptanceCriteria": [
+        "Homepage renders a product grid/list with exactly 6 products matching the names provided by the user.",
+        "Each product card displays the corresponding uploaded image and product name.",
+        "Layout is responsive (mobile, tablet, desktop) with no horizontal scrolling at common breakpoints."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/products/Sponge Cake.jpeg",
+          "operation": "create",
+          "description": "Add the user-uploaded product image as a static public asset to be used by the homepage product grid."
+        },
+        {
+          "path": "frontend/public/assets/products/Banana Cake.jpeg",
+          "operation": "create",
+          "description": "Add the user-uploaded product image as a static public asset to be used by the homepage product grid."
+        },
+        {
+          "path": "frontend/public/assets/products/Nuts cookies.jpeg",
+          "operation": "create",
+          "description": "Add the user-uploaded product image as a static public asset to be used by the homepage product grid."
+        },
+        {
+          "path": "frontend/public/assets/products/Malai Cake.jpeg",
+          "operation": "create",
+          "description": "Add the user-uploaded product image as a static public asset to be used by the homepage product grid."
+        },
+        {
+          "path": "frontend/public/assets/products/Kitkat chocolate cake.jpeg",
+          "operation": "create",
+          "description": "Add the user-uploaded product image as a static public asset to be used by the homepage product grid."
+        },
+        {
+          "path": "frontend/public/assets/products/honey cake.jpeg",
+          "operation": "create",
+          "description": "Add the user-uploaded product image as a static public asset to be used by the homepage product grid."
+        },
+        {
+          "path": "frontend/src/data/products.ts",
+          "operation": "create",
+          "description": "Define the six products (exact names as provided) and reference the corresponding static image paths under frontend/public/assets/products/ for use across the UI."
+        },
+        {
+          "path": "frontend/src/components/ProductCard.tsx",
+          "operation": "create",
+          "description": "Create a reusable product card component that renders product image + name and supports click/keyboard selection; use shadcn-ui Card/Button styling primitives if available (compose only). Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/ProductGrid.tsx",
+          "operation": "create",
+          "description": "Create a responsive grid/list component that renders exactly six ProductCard items from frontend/src/data/products.ts and adapts layout across common breakpoints (mobile/tablet/desktop)."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Implement the main single-page homepage layout and render the Products section containing the ProductGrid with the six items; ensure the page structure supports responsive behavior."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Provide a product details experience (modal/drawer or page) for each item showing name, larger image, and a short description.",
+      "acceptanceCriteria": [
+        "Selecting a product from the main list opens a details view for that specific product.",
+        "Details view includes the correct product name and the same image shown on the card, displayed larger.",
+        "User can close the details view and return to the product list."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ProductDetailsDialog.tsx",
+          "operation": "create",
+          "description": "Add a product details modal component that displays selected product name, larger image, and a short generic description; prefer shadcn-ui Dialog for accessible modal behavior (compose only). Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire product selection state so clicking a ProductCard opens ProductDetailsDialog for that specific product, and closing returns to the product list view."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Add basic cake shop site sections: header with site name, navigation links (Home/Products/Contact), and a contact section with placeholder details.",
+      "acceptanceCriteria": [
+        "Header is visible and contains a site name plus navigation links that scroll to sections or navigate within the app.",
+        "A Contact section is present and includes placeholder address, phone, and email text.",
+        "Navigation works on both desktop and mobile (e.g., collapses into a menu or stacks appropriately)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/SiteHeader.tsx",
+          "operation": "create",
+          "description": "Create a responsive header with site name and navigation links targeting in-page sections (e.g., #home, #products, #contact); for mobile navigation, use shadcn-ui Sheet (drawer) or equivalent composed UI components (no modifications under frontend/src/components/ui). Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/ContactSection.tsx",
+          "operation": "create",
+          "description": "Create a Contact section component with placeholder address/phone/email text suitable for a small cake shop website."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire SiteHeader into the top of the page and add section anchors/IDs for Home/Products/Contact; render ContactSection near the bottom so navigation links scroll correctly on desktop and mobile."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Apply a coherent warm bakery-themed visual design across the site and avoid blue/purple as dominant theme colors.",
+      "acceptanceCriteria": [
+        "Site uses a consistent visual theme (colors, typography, spacing) across header, product cards, details view, and contact section.",
+        "Primary visual styling reads as a bakery/cake shop theme (warm neutrals; not a tech/enterprise look).",
+        "No blue/purple is used as the dominant brand color (accents are acceptable, but theme should not be blue/purple-led)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Define global styles and/or Tailwind theme CSS variables for a warm bakery palette (cream/caramel/chocolate tones), friendly typography defaults, soft surfaces, and subtle shadows; ensure overall styling is consistent across all sections and avoids blue/purple as the primary theme."
+        },
+        {
+          "path": "frontend/src/components/ProductCard.tsx",
+          "operation": "modify",
+          "description": "Refine product card styling to match the bakery theme (soft surfaces, subtle shadows, warm accents) while remaining responsive; use shadcn-ui composed components if available. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/ProductDetailsDialog.tsx",
+          "operation": "modify",
+          "description": "Align the details modal styling with the bakery theme (typography, spacing, warm accents) and ensure the larger image presentation is visually consistent; compose shadcn-ui Dialog styling primitives if available. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/SiteHeader.tsx",
+          "operation": "modify",
+          "description": "Apply bakery-themed header styling (warm background, readable nav, appropriate spacing) and ensure mobile/desktop navigation remains usable and consistent with the theme; compose shadcn-ui primitives if used. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/ContactSection.tsx",
+          "operation": "modify",
+          "description": "Apply consistent bakery-themed styling (card-like section, warm neutrals, readable labels) for the contact section to match the rest of the site."
+        }
+      ]
+    }
+  ]
+}
